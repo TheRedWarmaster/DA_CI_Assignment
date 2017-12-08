@@ -4,5 +4,15 @@ cache:
         - $HOME/.m2
 jdk:
     - oraclejdk8
+sudo: required
+services:
+    - docker
+notificqtions:
+    email:
+        - r0369643@ucll.be
+    on_success: always
+    on_failure: always
 script:
-    - mvn clean package
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    - mvn clean package docker:build
+    - docker push homebasered/da:ex1
