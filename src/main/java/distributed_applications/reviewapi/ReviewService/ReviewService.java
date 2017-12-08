@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ReviewService;
+package distributed_applications.reviewapi.ReviewService;
 
-import ReviewDatabase.ReviewDatabaseInterface;
-import ReviewDomain.Review;
+import distributed_applications.reviewapi.ReviewDatabase.ReviewDatabaseInterface;
+import distributed_applications.reviewapi.ReviewDomain.Review;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author redro
  */
 @RestController
+@RequestMapping(value = "/api")
 public class ReviewService {
     
     @Autowired

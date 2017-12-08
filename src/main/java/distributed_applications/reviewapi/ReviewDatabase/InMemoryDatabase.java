@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ReviewDatabase;
+package distributed_applications.reviewapi.ReviewDatabase;
 
-import ReviewDomain.Review;
+import distributed_applications.reviewapi.ReviewDomain.Review;
 import java.util.ArrayList;
 import java.util.List;
 
