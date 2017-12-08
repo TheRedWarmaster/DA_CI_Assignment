@@ -31,12 +31,6 @@
             <version>1.5.7.RELEASE</version>
         </dependency>
         
-        <dependency>
-            <groupId>distributed_applications</groupId>
-            <artifactId>WeatherDomain</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
