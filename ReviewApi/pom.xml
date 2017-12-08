@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>distributed_applications</groupId>
-        <artifactId>Assignment</artifactId>
-        <version>1.0.0</version>
-    </parent>
+    <groupId>distributed_applications</groupId>
+    <version>1.0.0</version>
     <artifactId>ReviewApi</artifactId>
     <packaging>jar</packaging>
     <dependencies>
@@ -21,17 +18,41 @@
             <version>1.2.4.RELEASE</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.9.1</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+            <version>1.5.7.RELEASE</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>1.5.7.RELEASE</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 	
-	<plugins>
-		<plugin>
-		  <groupId>com.spotify</groupId>
-		  <artifactId>docker-maven-plugin</artifactId>
-		  <version>0.4.10</version>
-		  <configuration>
-			<baseImage>java</baseImage>
-			<imageName>reviewService</imageName>
-		  </configuration>
-		</plugin>
-	</plugins>
+    <build>
+        <plugins>
+            <plugin>
+              <groupId>com.spotify</groupId>
+              <artifactId>docker-maven-plugin</artifactId>
+              <version>0.4.10</version>
+              <configuration>
+                    <baseImage>java</baseImage>
+                    <imageName>reviewService</imageName>
+              </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 </project>
