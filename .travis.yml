@@ -7,12 +7,7 @@ jdk:
 sudo: required
 services:
     - docker
-notificqtions:
-    email:
-        - r0369643@ucll.be
-    on_success: always
-    on_failure: always
 script:
     - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-    - mvn clean package docker:build
+    - mvn dockerfile:build
     - docker push homebasered/da
