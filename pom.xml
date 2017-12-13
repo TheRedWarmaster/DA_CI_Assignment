@@ -58,6 +58,7 @@
               <version>1.0.0</version>
               <configuration>
 				<baseImage>java</baseImage>
+                                <imageName>homebasered/da</imageName>
               </configuration>
             </plugin>
             
