@@ -57,6 +57,7 @@
               <artifactId>docker-maven-plugin</artifactId>
               <version>1.0.0</version>
               <configuration>
+				<baseImage>java</baseImage>
               </configuration>
             </plugin>
             
